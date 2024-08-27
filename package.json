@@ -1,0 +1,27 @@
+{
+  "name": "dmc",
+  "version": "1.0.0",
+  "description": "项目模板管理工具",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "author": "dmm",
+  "license": "ISC",
+  "bin": {
+    "dmc": "bin/main.js"
+  },
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "inquirer": "^8.0.0",
+    "lodash": "^4.17.21",
+    "ora": "^5.4.1",
+    "shelljs": "^0.8.5",
+    "simple-git": "^3.25.0",
+    "uuid": "^10.0.0"
+  }
+}
