@@ -54,9 +54,10 @@ async function createTemplate(model,targetPath) {
  */
 function replaceStrToObj(str){
   if(!str || !_.isString(str)) return {}
-  return str.split(',').reduce((result,item)=>{
-    const key = item.split('=')[0].trim()
-    const value = item.split('=')[1].trim()
+  return str.split(' ').reduce((result,item)=>{
+    const [one,...par] = item.split('=')
+    const key = one.trim()
+    const value = par.join('=').trim()
     if(key && value){
       result[key] = value
     }
@@ -82,6 +83,7 @@ function textReplace(targetName, replaceStr, model){
     }
   }
   const replaceObj = replaceStrToObj(replaceStr)
+  console.log(replaceObj,'====',replaceStr)
   if(fileTools.isDir(targetName)){
     function replaceFun(targetName_){
       const entries = fs.readdirSync(targetName_, { withFileTypes: true });

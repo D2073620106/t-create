@@ -9,6 +9,10 @@ const _path = require("path");
 module.exports = async function (name, options) {
   log.debug(name, options)
   const model = await service.getTemplateModel(name)
+  if(!model?.name) {
+    log.error('未找到模板');
+    return
+  }
   const targetPath = _path.join(getCwdPath(), options.name || model.name)
   if(options.force){
      fileTools.delFileOrDir(targetPath)
