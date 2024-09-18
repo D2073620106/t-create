@@ -41,6 +41,7 @@ async function createTemplate(model,targetPath) {
       await git.clone(model.giturl, targetPath)
       // await git.checkoutRemoteBranch(model.branch)
     }catch (e) {
+      log.error('如果拉取失败，可以如下操作:1、请检查git设置的用户名以及邮箱 2、检查保存时的git地址是否有误')
       log.debug(e)
     }
   }

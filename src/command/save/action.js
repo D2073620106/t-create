@@ -12,7 +12,8 @@ module.exports = function (path, options){
   const isExist = service.templateIsExist(model)
   // 2、存在检查是否需要强制覆盖，否则停止
   if(!options.force && isExist){
-    throw new BaseError('该名称模板已存在，请更换名称或删除原来的模板后保存')
+    console.log('该名称模板已存在，请更换名称或删除原来的模板后保存')
+    return
   }else if(isExist && options.force){
     service.deleteTemplate(model)
   }

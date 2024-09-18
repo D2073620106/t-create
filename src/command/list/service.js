@@ -54,7 +54,14 @@ function findList(){
  * @returns {Table}
  */
 function createTable(options, list){
-  const table =new Table(options);
+  const table =new Table({
+    style: {
+      'padding-left': 0,
+      'padding-right': 0,
+      'padding-top': 0,
+      'padding-bottom': 0,
+    },
+    ...options});
   table.push(...list)
   return table
 }
@@ -64,7 +71,7 @@ function createTable(options, list){
  * @param list
  */
 function showList(list){
-  if(list.length===0) return log.success('未查询到模板记录');
+  if(list.length===0) return
   list = list
       .sort((a,b)=>{return new Date(b.createTime).getTime()-new Date(a.createTime).getTime()})
       .map((item,index)=>{
@@ -85,7 +92,7 @@ function showList(list){
  * @param list
  */
 function showDetail(list){
-  if(list.length===0) return log.success('未查询到模板记录');
+  if(list.length===0) return
   let tabData = {}
   if(list.length===1){
     tabData = list[0]
@@ -95,7 +102,7 @@ function showDetail(list){
     return
   }
   const data = Object.keys(tabData).map(key=>{
-    return [key, tabData[key]]
+    return [key, JSON.stringify(tabData[key])]
   })
   const table = createTable({
     head: ['属性','值'],

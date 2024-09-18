@@ -1,1 +1,76 @@
-{"common":{}}
+{
+  "common": {
+    "dm-card": {
+      "uuid": "96a2bfe5-12a7-4d90-81c8-f7da8386455a",
+      "createPath": "C:\\userData\\project\\xingchuang_code\\huangye\\src\\components\\dm-card",
+      "createParams": "dm-card",
+      "name": "dm-card",
+      "linkType": "folder",
+      "fileType": "",
+      "createTime": "2024/8/31 09:19:43",
+      "type": "common",
+      "savePath": "C:\\userData\\project\\t-create\\src\\templates\\common\\dm-card",
+      "desc": "",
+      "author": "",
+      "replaceIgnore": [],
+      "giturl": "",
+      "gitname": "",
+      "gitemail": "",
+      "gitbranch": "master"
+    },
+    "dm-empty": {
+      "uuid": "20e893ac-9f52-491c-93ce-c387c01566ee",
+      "createPath": "C:\\userData\\project\\xingchuang_code\\huangye\\src\\components\\dm-empty",
+      "createParams": "dm-empty",
+      "name": "dm-empty",
+      "linkType": "folder",
+      "fileType": "",
+      "createTime": "2024/8/31 09:21:34",
+      "type": "common",
+      "savePath": "C:\\userData\\project\\t-create\\src\\templates\\common\\dm-empty",
+      "desc": "",
+      "author": "",
+      "replaceIgnore": [],
+      "giturl": "",
+      "gitname": "",
+      "gitemail": "",
+      "gitbranch": "master"
+    },
+    "eventbus.js": {
+      "uuid": "b5f004a6-63e0-471a-a1f5-2e5ec1418029",
+      "createPath": "C:\\userData\\project\\xingchuang_code\\huangye\\src\\utils\\eventbus.js",
+      "createParams": "eventbus.js",
+      "name": "eventbus.js",
+      "linkType": "file",
+      "fileType": "js",
+      "createTime": "2024/8/31 09:22:11",
+      "type": "common",
+      "savePath": "C:\\userData\\project\\t-create\\src\\templates\\common\\eventbus.js",
+      "desc": "",
+      "author": "",
+      "replaceIgnore": [],
+      "giturl": "",
+      "gitname": "",
+      "gitemail": "",
+      "gitbranch": "master"
+    },
+    "list": {
+      "uuid": "59aa6f79-6718-4120-8166-5d0f7ef1ad31",
+      "createPath": "C:\\userData\\project\\xingchuang_code\\huangye\\src\\pages\\buy\\order.vue",
+      "createParams": "order.vue",
+      "name": "list",
+      "linkType": "file",
+      "fileType": "vue",
+      "createTime": "2024/8/31 09:23:17",
+      "type": "common",
+      "savePath": "C:\\userData\\project\\t-create\\src\\templates\\common\\order.vue",
+      "desc": "",
+      "author": "",
+      "replaceIgnore": [],
+      "giturl": "",
+      "gitname": "",
+      "gitemail": "",
+      "gitbranch": "master"
+    }
+  }
+}

@@ -5,17 +5,21 @@ const service = require('./service')
 const config = require("../../config");
 const {BaseError} = require("../../utils/error");
 const {fileTools} = require("../../utils/file");
+const _ = require('lodash')
+const listService = require("../list/service");
 
 
 module.exports = async function (key,value) {
   log.debug(key,value)
   if(!key && !value?.[0]){
-    log.info('当前配置信息：')
-    log.info(config)
+    log.success('当前配置信息：')
+    const newConfig = _.omit(config,['env'])
+    listService.showDetail([newConfig])
     return
   }
   if(!config[key]){
-    throw new BaseError('无此配置')
+    log.error('无此配置')
+    return
   }
   const data = {}
   if(key ==='localTemplateSavePath'){
@@ -31,7 +35,8 @@ module.exports = async function (key,value) {
   }
   if(key==='baseFolder'){
     value = value[0]
-    service.updateBaseFolder(value)
+    const flag = service.updateBaseFolder(value)
+    if(flag===0) return
     data[key] = value
   }
   if(key==='ignore'){

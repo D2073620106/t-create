@@ -48,7 +48,8 @@ function updateBaseFolder(newBaseFolder){
   // 2、修改模板配置config
   const temConfig = readTemplateConfig()
   if(temConfig[newBaseFolder]){
-    throw new BaseError(`分类${newBaseFolder}已存在，不能设置重复路径`)
+    log.error(`分类${newBaseFolder}已存在，不能设置重复路径`)
+    return 0
   }
   const base = temConfig[config.baseFolder]
   const newBase = {}

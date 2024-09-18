@@ -15,6 +15,13 @@ module.exports = {
       description:'文件或文件夹名称',
       default:'',
       type:'<char>'
+    },
+    {
+      name:'force',
+      alias:'f',
+      description:'是否覆盖目标文件或文件夹',
+      default: false,
+      type:''
     }
   ],
   action: action,
@@ -22,6 +29,7 @@ module.exports = {
   example:`
     eg:
       $ dmc copy index.js vueProject // 拷贝index.js到vueProject目录下
+      $ dmc copy index.js vueProject -f // 拷贝index.js到vueProject目录下,并且覆盖已有index.js
       $ dmc copy vueTest vueProject  // 拷贝文件夹vueTest到vueProject目录下
       $ dmc copy index.js vueProject vueProject1 // 拷贝index.js到vueProject、 vueProject1目录下
       $ dmc copy index.js vueProject -n index_test.js // 拷贝index.js到vueProject目录下,并修改名称为index_test.js
